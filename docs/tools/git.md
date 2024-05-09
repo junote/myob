@@ -1,6 +1,12 @@
 
 ###  Auto commit
 
+Cron表达式由6个字段组成，分别表示分钟、小时、日、月、周、命令
+```shell
+[Minute] [hour] [Day_of_the_Month] [Day_of_the_Year] [Day_of_the_Week] [command]
+```
+
+``
 ```shell
 crontab -e
 
@@ -8,17 +14,18 @@ crontab -e
 //`0 1 * * *` 表示每天的第1小时（凌晨1点）执行。
 0 1 * * * cd /path/to/repository && git push origin master
 
+sudo systemctl restart cron
+
 ```
 
 将”prepare-commit-msg.sample”文件复制为”prepare-commit-msg”，去掉文件名中的”.sample”后缀，这样Git就会在每次提交之前运行该脚本。确保脚本具有可执行权限，可以使用chmod命令给脚本添加权限。
-然后，打开脚本文件，在文件的合适位置添加以下代码：
+然后，打开脚本文件，在文件添加以下代码：
 
 ```
-#!/bin/sh
+#!/bin/bash
 
 # Add date to git commit message automatically
-DATE=(date "+%Y-%m-%d")
-echo "DATE 1">"1"
+git status --short > $1
 
 ```
 
