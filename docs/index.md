@@ -9,7 +9,7 @@
 AES加密也叫对称加密：A用密码对数据进行AES加密后，B用同样的密码对密文进行AES解密。
 
 
-##### 基本加密解密文本命令
+**基本加密解密文本命令**
 ```shell
 
 openssl enc -aes-256-cbc -in plain.txt -out secure.txt -p
@@ -27,6 +27,7 @@ key=67280929EB69F4C49733A32E4850A3B65A50C1860158F6B9BBF2CE9F9AACBB59
 iv =72EBD765FEB94E3760EFC7E1FFBB5EB6
 
 ```
+
 
 
 
