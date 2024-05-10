@@ -1,13 +1,11 @@
 
-###  Auto commit
+###  git commit hook
 
 Cron表达式由6个字段组成，分别表示分钟、小时、日、月、周、命令
+
 ```shell
 [Minute] [hour] [Day_of_the_Month] [Day_of_the_Year] [Day_of_the_Week] [command]
-```
 
-``
-```shell
 crontab -e
 
 
