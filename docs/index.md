@@ -28,7 +28,12 @@ iv =72EBD765FEB94E3760EFC7E1FFBB5EB6
 
 ```
 
+### cmake_build
 
+```
+cmake -B builddir
+cmake --build builddir
+```
 
 
 

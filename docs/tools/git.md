@@ -30,3 +30,14 @@ git status --short > $1
 [Git 自动将日期添加到git提交消息中|极客教程 (geek-docs.com)](https://geek-docs.com/git/git-questions/40_git_add_date_to_git_commit_message_automatically.html)
 [Git 定时任务中进行 Git push|极客教程 (geek-docs.com)](https://geek-docs.com/git/git-questions/23_git_git_push_via_cron.html#ftoc-heading-3)
 
+
+### show_single_file_log
+
+```
+git log -p --follow -- <filename>
+$ git log -- divLhsSkyAd.scala.html    # one-line summary info
+$ git log -p divLhsSkyAd.scala.html    # detail about each “patch”
+git diff --cached   Show git changes that has been added but not committed
+git diff --cached src/main/scala/agt/Main.scala
+```
+

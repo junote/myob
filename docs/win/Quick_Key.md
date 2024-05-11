@@ -1,0 +1,4 @@
+
+
+- win + v    copy history
+- 
