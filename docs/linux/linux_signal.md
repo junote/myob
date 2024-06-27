@@ -129,3 +129,7 @@ set参数用于保存被挂起的信号集。
 igpending成功时返回0，失败时返回-1并设置errno。
 
 [[test_signal.cpp]]
+
+
+[[test_sigurg.cpp]]
+
