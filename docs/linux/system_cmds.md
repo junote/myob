@@ -5,3 +5,9 @@
 
 我们可以使用**ipcrm**命令来删除遗留在系统中的共享资源
 
+
+### printk_level
+
+echo 5 >/proc/sys/kernel/printk
+
+

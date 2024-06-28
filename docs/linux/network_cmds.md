@@ -1,4 +1,15 @@
+### ip
 
+sudo apt install iproute2
+
+ ip -d link show
+
+
+### ifconfig
+
+```
+ifconfig eth1 hw ether 00:01:9f:ef:66:77
+```
 ### arp
 arp-d 192.168.1.109#删除Kongming20对应的ARP缓存项
 arp-s 192.168.1.109 08:00:27:53:10:67#添加Kongming20对应的ARP缓存项
@@ -176,6 +187,40 @@ netstat的每行输出都包含如下6个字段
 
 iperf是一个测量网络状况的工具，-s选项表示将其作为服务器运行。
 
+服务端：收包，使用 -s 参数指定， iperf3 -s
+客户端：发包，使用 -c xx.xx.xx.xx 来指定要往哪个服务端发包， iperf3 -c 172.20.20.200
+iperf3 还有更多的参数，其中有一些是客户端专用的，有一些是服务端专用的，也有一些是二者共用的。
+
+具体可以前往这个地址，进行查阅：https://www.cnblogs.com/yingsong/p/5682080.html
+
+常用的参数有
+
+-u：发送 UDP 包，仅客户端可用，服务端默认 tcp udp 都可以接收
+-b：指定发送速率（比如 100M），发送端不受限速影响，如果有限速，也只是接收端有影响
+-p：后接服务端监听的端口
+-i：设置带宽报告的时间间隔，单位为秒
+-t：设置测试的时长，单位为秒
+-w：设置tcp窗口大小，一般可以不用设置，默认即可
+-B：绑定客户端的ip地址
+-4：指定 ipv4
+-n：指定传输的字节数
+-f：格式化带宽数输出，后接单位，比如 K，M
+--get-server-output：在客户端直接获取服务端输出的结果
+
+iperf3 的输出结果可以分为两类
+
+一类是，详细的带宽数据
+一类是，最终的带宽数据
+如果你像我一样加上 --get-server-output ，可以看到服务端输出的报告。
+
+接下来看一下，输出的报告有哪些内容。
+
+第一列 Interval：测试的时长
+第二列 Transfer：在 Interval 时长里，传输的数据量
+第三列 Bitrate：传输速率
+第四列 Jitter：网络抖动，连续发送数据包时延差值的平均值，越小说明网络质量越好
+第五列 Lost/Total Datagrams：丢失的数据包与发送的总数据包
+
 
 ### lsof
 
@@ -339,3 +384,35 @@ mpstat[-P{|ALL}][interval[count]]
 ❑%guest，运行虚拟CPU的时间占CPU总运行时间的比例。
 
 ❑%idle，系统空闲的时间占CPU总运行时间的比例。
+
+### misc
+
+#### check socket port
+```
+
+sudo apt install iproute2
+sudo ss -tulpn
+-t, --tcp: To see all TCP sockets
+-u, --udp: To see all UDP sockets
+-l, --listening: To see all listening sockets
+-p, processes: To see which processes are using sockets
+-n, --numeric: Use this option if you want to see a port number instead of service names
+
+
+sudo apt-get install net-tools
+sudo netstat –tulnp
+-t, --tcp: To see all TCP sockets
+-u, --udp: To see all UDP sockets
+-l, --listening: To see all listening sockets
+-p, processes: To see which processes are using sockets
+-n, --numeric: Use this option if you want to see a port number instead of service names
+
+apt-get install lsof
+sudo lsof -nP -iTCP -sTCP:LISTEN
+
+Check open ports using the Nmap utility
+sudo apt install nmap
+sudo nmap –sT –p-65535 ip-address
+```
+
+

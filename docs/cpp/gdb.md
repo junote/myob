@@ -38,3 +38,23 @@ Breakpoint 1 at 0x8049787:file processpool.h,line 264.
 
 ❑set scheduler-locking[off|on|step]。调试多线程程序时，默认除了被调试的线程在执行外，其他线程也在继续执行，但有的时候我们希望只让被调试的线程运行。这可以通过这个命令来实现。该命令设置scheduler-locking的值：off表示不锁定任何线程，即所有线程都可以继续执行，这是默认值；on表示只有当前被调试的线程会继续执行；step表示在单步执行的时候，只有当前线程会执行。
 
+
+### args
+```
+- args： gdb --args prog argslist
+
+```
+
+## breaks
+
+```
+- break
+
+- **break** [_Function Name_] class:fun
+- **break** [_File Name_]:[_Line Number_]
+- **break** [_Line Number_]**
+- break* [_Address_]
+- **break** [_..._] if [_Condition_]
+- **break** [_..._] thread [_Thread-id_]
+```
+

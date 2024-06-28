@@ -6,6 +6,10 @@ cmake -B builddir
 cmake --build builddir
 ```
 
+### ccache
+```
+ccache -C
+```
 
 
 

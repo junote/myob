@@ -41,3 +41,32 @@ git diff --cached   Show git changes that has been added but not committed
 git diff --cached src/main/scala/agt/Main.scala
 ```
 
+
+
+### update submoudle
+
+```
+// idea 1
+git submodule foreach --recursive git checkout .
+
+idea2
+rm submodule
+git submodule update --init --recursive
+
+idea3
+git submodule update --remote --merge
+
+```
+
+### rm_submodule
+
+```
+# 逆初始化模块，其中{MOD_NAME}为模块目录，执行后可发现模块目录被清空
+git submodule deinit {MOD_NAME} 
+# 删除.gitmodules中记录的模块信息（--cached选项清除.git/modules中的缓存）
+git rm --cached {MOD_NAME} 
+# 提交更改到代码库，可观察到'.gitmodules'内容发生变更
+git commit -am "Remove a submodule."
+
+```
+
