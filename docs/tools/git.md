@@ -70,3 +70,6 @@ git commit -am "Remove a submodule."
 
 ```
 
+### delet_change
+- 删除已有文件上的更改 `git reset --hard`
+- 删除添加的文件 `git clean -f`
