@@ -29,3 +29,16 @@ RUN cd / && \
     cmake .. && \
     make -j64
 ```
+
+
+### vcpkg
+
+```
+vcpkg install grpc
+
+vcpkg install protobuf
+
+```
+
+[advra/grpc-vcpkg-boilerplate-example: This is a simple helloworld example that shows how to setup, configure and compile using vcpkg manager. (github.com)](https://github.com/advra/grpc-vcpkg-boilerplate-example)
+

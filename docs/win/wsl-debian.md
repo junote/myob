@@ -9,7 +9,7 @@ sudo apt install clang clangd clang-format
 sudo apt install openssh*
 sudo apt install git
 
-sudo apt install zsh curl wget
+sudo apt install zsh curl wget ripgrep vim
 sh -c "$(curl -fsSL https://install.ohmyz.sh)"
  ZSH_THEME="ys"
 ```
