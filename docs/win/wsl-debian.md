@@ -12,6 +12,14 @@ sudo apt install git
 sudo apt install zsh curl wget ripgrep vim
 sh -c "$(curl -fsSL https://install.ohmyz.sh)"
  ZSH_THEME="ys"
+
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+```
+
+
+
 ```
 
 ### key
