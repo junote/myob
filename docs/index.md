@@ -13,7 +13,7 @@
 ### python
 
 ### tools
-- [[git]]
+- [[git_prj]]
 
 ### win
 - [[quick_Key]]
