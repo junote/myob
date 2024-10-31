@@ -17,3 +17,6 @@
 ❑/proc/sys/net/ipv4/tcp_syncookies，指定是否打开TCP同步标签（syncookie）。同步标签通过启动cookie来防止一个监听socket因不停地重复接收来自同一个地址的连接请求（同步报文段），而导致listen监听队列溢出（所谓的SYN风暴）。
 
 
+
+### 线程数量
+/proc/sys/kernel/threads-max
