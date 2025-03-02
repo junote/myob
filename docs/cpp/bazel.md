@@ -51,3 +51,5 @@ cc_binary(
 主软件包中的 `hello-world` 目标依赖于 `hello-time` 目标 在 `lib` 软件包中（因此是目标标签 `//lib:hello-time`）- Bazel 知道 通过 `deps` 属性实现这一目的。您可以在依赖项图中看到这一点：
 
 为确保构建成功，请在 `lib/BUILD` 中创建 `//lib:hello-time` 目标 使用 visibility 属性对 `main/BUILD` 中的目标明确可见。 这是因为，在默认情况下，只有同一个 `BUILD` 文件。Bazel 使用目标可见性来防止库中包含的实现细节泄露到公共 API 中等问题。
+
+
