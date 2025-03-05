@@ -19,3 +19,11 @@ SFP模块未集成CDR，但XFP模块的收发方向上均集成了CDR，导致�
 
 ### GBE
 ![[Pasted image 20240628131825.png]]
+
+
+
+#### xfp_sfp
+
+SFP模块未集成CDR，但XFP模块的收发方向上均集成了CDR，导致后者尺寸和功耗都比较大。
+
+

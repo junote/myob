@@ -13,3 +13,15 @@ DTS -》 DTB
 
 ```
 
+### wdg
+
+```
++	gpiowdt: watchdog {
++		compatible = "linux,wdt-gpio";
++		gpios = <&gpio1 5 GPIO_ACTIVE_LOW>;
++		hw_algo = "level";
++		hw_margin_ms = <1600>;
++	};
+
+```
+
