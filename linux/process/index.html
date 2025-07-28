@@ -1,0 +1,1884 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Process - myob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fork" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="myob" class="md-header-nav__button md-logo" aria-label="myob">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            myob
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Process
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../book/efficient_at_linux_command_line/" class="md-tabs__link">
+          Book
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../cpp/array_float/" class="md-tabs__link">
+          Cpp
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../fpga/xlnx/" class="md-tabs__link">
+          Fpga
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../fw/debian_eth_name/" class="md-tabs__link">
+          Fw
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../IO_API/" class="md-tabs__link md-tabs__link--active">
+          Linux
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../sonic/MySonic/" class="md-tabs__link">
+          Sonic
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tools/cisco_router/" class="md-tabs__link">
+          Tools
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../wiki/100G_KP4_KR4/" class="md-tabs__link">
+          Wiki
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../win/Quick_Key/" class="md-tabs__link">
+          Win
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myob" class="md-nav__button md-logo" aria-label="myob">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    myob
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Book
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Book" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Book
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/efficient_at_linux_command_line/" title="Efficient at linux command line" class="md-nav__link">
+      Efficient at linux command line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E5%9F%BA%E4%BA%8EYANG%E7%9A%84%E5%8F%AF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%BB%9C/" title="基于YANG的可编程网络" class="md-nav__link">
+      基于YANG的可编程网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E7%8E%B0%E4%BB%A3C%2B%2B/" title="现代C++" class="md-nav__link">
+      现代C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E7%8E%B0%E4%BB%A3cpp%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/" title="现代cpp软件架构" class="md-nav__link">
+      现代cpp软件架构
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cpp
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Cpp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/array_float/" title="Array float" class="md-nav__link">
+      Array float
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/bazel/" title="Bazel" class="md-nav__link">
+      Bazel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/c_misc/" title="C misc" class="md-nav__link">
+      C misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/cmake/" title="Cmake" class="md-nav__link">
+      Cmake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/cpp_container/" title="Cpp container" class="md-nav__link">
+      Cpp container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/gdb/" title="Gdb" class="md-nav__link">
+      Gdb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/grpc/" title="Grpc" class="md-nav__link">
+      Grpc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/timestamp/" title="Timestamp" class="md-nav__link">
+      Timestamp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/vcpkg/" title="Vcpkg" class="md-nav__link">
+      Vcpkg
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Fpga
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Fpga" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Fpga
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fpga/xlnx/" title="Xlnx" class="md-nav__link">
+      Xlnx
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Fw
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Fw" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Fw
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/debian_eth_name/" title="Debian eth name" class="md-nav__link">
+      Debian eth name
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/devicetree/" title="Devicetree" class="md-nav__link">
+      Devicetree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/gpiod/" title="Gpiod" class="md-nav__link">
+      Gpiod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/ramdisk/" title="Ramdisk" class="md-nav__link">
+      Ramdisk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Linux
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linux" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_API/" title="IO API" class="md-nav__link">
+      IO API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_multiplexing/" title="IO multiplexing" class="md-nav__link">
+      IO multiplexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apt/" title="Apt" class="md-nav__link">
+      Apt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic_api/" title="Basic api" class="md-nav__link">
+      Basic api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../centos7/" title="Centos7" class="md-nav__link">
+      Centos7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coredump/" title="Coredump" class="md-nav__link">
+      Coredump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gpio/" title="Gpio" class="md-nav__link">
+      Gpio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../inbox/" title="Inbox" class="md-nav__link">
+      Inbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iptables_nat/" title="Iptables nat" class="md-nav__link">
+      Iptables nat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kernel_prameter/" title="Kernel prameter" class="md-nav__link">
+      Kernel prameter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux_signal/" title="Linux signal" class="md-nav__link">
+      Linux signal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../misc_cmds/" title="Misc cmds" class="md-nav__link">
+      Misc cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network_cmds/" title="Network cmds" class="md-nav__link">
+      Network cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Process" class="md-nav__link md-nav__link--active">
+      Process
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick_script/" title="Quick script" class="md-nav__link">
+      Quick script
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serial_console/" title="Serial console" class="md-nav__link">
+      Serial console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../socket_api/" title="Socket api" class="md-nav__link">
+      Socket api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ssh/" title="Ssh" class="md-nav__link">
+      Ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../system_cmds/" title="System cmds" class="md-nav__link">
+      System cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../thread/" title="Thread" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Sonic
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sonic" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Sonic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/MySonic/" title="MySonic" class="md-nav__link">
+      MySonic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/redis_basic/" title="Redis basic" class="md-nav__link">
+      Redis basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/sonic-common/" title="Sonic common" class="md-nav__link">
+      Sonic common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/swss-common-dockerdb11/" title="Swss common dockerdb11" class="md-nav__link">
+      Swss common dockerdb11
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/cisco_router/" title="Cisco router" class="md-nav__link">
+      Cisco router
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/clang-format/" title="Clang format" class="md-nav__link">
+      Clang format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/express/" title="Express" class="md-nav__link">
+      Express
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/grep_sed_ack/" title="Grep sed ack" class="md-nav__link">
+      Grep sed ack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/helix/" title="Helix" class="md-nav__link">
+      Helix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/lsyncd/" title="Lsyncd" class="md-nav__link">
+      Lsyncd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/sqlite/" title="Sqlite" class="md-nav__link">
+      Sqlite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/vim/" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/vscode/" title="Vscode" class="md-nav__link">
+      Vscode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/windowterminal/" title="Windowterminal" class="md-nav__link">
+      Windowterminal
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Wiki
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wiki" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/100G_KP4_KR4/" title="100G KP4 KR4" class="md-nav__link">
+      100G KP4 KR4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/Cpp%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="Cpp技术面试基础知识总结" class="md-nav__link">
+      Cpp技术面试基础知识总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/OTU/" title="OTU" class="md-nav__link">
+      OTU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/TCP_IP/" title="TCP IP" class="md-nav__link">
+      TCP IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/aes/" title="Aes" class="md-nav__link">
+      Aes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/altera/" title="Altera" class="md-nav__link">
+      Altera
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/k8s/" title="K8s" class="md-nav__link">
+      K8s
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/linux_misc_cmds/" title="Linux misc cmds" class="md-nav__link">
+      Linux misc cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/ntp/" title="Ntp" class="md-nav__link">
+      Ntp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/opengrok/" title="Opengrok" class="md-nav__link">
+      Opengrok
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/optical_module/" title="Optical module" class="md-nav__link">
+      Optical module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/optical_parameters/" title="Optical parameters" class="md-nav__link">
+      Optical parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/ptp/" title="Ptp" class="md-nav__link">
+      Ptp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/qsfp/" title="Qsfp" class="md-nav__link">
+      Qsfp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/vrf/" title="Vrf" class="md-nav__link">
+      Vrf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/xilinx/" title="Xilinx" class="md-nav__link">
+      Xilinx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/zellij/" title="Zellij" class="md-nav__link">
+      Zellij
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Win
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Win" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        Win
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/Quick_Key/" title="Quick Key" class="md-nav__link">
+      Quick Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/msys/" title="Msys" class="md-nav__link">
+      Msys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/vscode/" title="Vscode" class="md-nav__link">
+      Vscode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-arch/" title="Wsl arch" class="md-nav__link">
+      Wsl arch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-debian/" title="Wsl debian" class="md-nav__link">
+      Wsl debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-debian11/" title="Wsl debian11" class="md-nav__link">
+      Wsl debian11
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-ubuntu/" title="Wsl ubuntu" class="md-nav__link">
+      Wsl ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl/" title="Wsl" class="md-nav__link">
+      Wsl
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h3 id="fork">fork<a class="headerlink" href="#fork" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜unistd.h＞
+
+pid_t fork(void);
+</code></pre></div>
+<p>该函数的每次调用都返回两次，在父进程中返回的是子进程的PID，在子进程中则返回0。</p>
+<p>该返回值是后续代码判断当前进程是父进程还是子进程的依据。</p>
+<p>fork调用失败时返回-1，并设置errno。</p>
+<p>fork函数复制当前进程，在内核进程表中创建一个新的进程表项。新的进程表项有很多属性和原进程相同，比如堆指针、栈指针和标志寄存器的值。但也有许多属性被赋予了新的值，比如该进程的PPID被设置成原进程的PID，信号位图被清除</p>
+<p>子进程的代码与父进程完全相同，同时它还会复制父进程的数据（堆数据、栈数据和静态数据）。数据的复制采用的是所谓的写时复制（copy on writte），即只有在任一进程（父进程或子进程）对数据执行了写操作时，复制才会发生（先是缺页中断，然后操作系统给子进程分配内存并复制父进程的数据）。\</p>
+<h3 id="exec">exec<a class="headerlink" href="#exec" title="Permanent link">#</a></h3>
+<p>在子进程中执行其他程序，即替换当前进程映像</p>
+<div class="highlight"><pre><span></span><code>#include＜unistd.h＞
+
+extern char**environ;
+int execl(const char*path,const char*arg,...);
+int execlp(const char*file,const char*arg,...);
+int execle(const char*path,const char*arg,...,char*const envp[]);
+int execv(const char*path,char*const argv[]);
+int execvp(const char*file,char*const argv[]);
+int execve(const char*path,char*const argv[],char*const envp[]);
+</code></pre></div>
+<p>path参数指定可执行文件的完整路径，<br />
+file参数可以接受文件名，该文件的具体位置则在环境变量PATH中搜寻。<br />
+arg接受可变参数，<br />
+argv则接受参数数组，它们都会被传递给新程序（path或file指定的程序）的main函数。<br />
+envp参数用于设置新程序的环境变量。如果未设置它，则新程序将使用由全局变量environ指定的环境变量。</p>
+<p>exec函数是不返回的，除非出错。它出错时返回-1，并设置errno。如果没出错，则原程序中exec调用之后的代码都不会执行，因为此时原程序已经被exec的参数指定的程序完全替换</p>
+<p>exec函数不会关闭原程序打开的文件描述符，除非该文件描述符被设置了类似SOCK_CLOEXEC的属性</p>
+<h3 id="处理僵尸进程">处理僵尸进程<a class="headerlink" href="#处理僵尸进程" title="Permanent link">#</a></h3>
+<p>函数在父进程中调用，以等待子进程的结束，并获取子进程的返回信息，从而避免了僵尸进程的产生，或者使子进程的僵尸态立即结束</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/wait.h＞
+
+pid_t wait(int*stat_loc);
+
+pid_t waitpid(pid_t pid,int*stat_loc,int options);
+</code></pre></div>
+<p>wait函数将阻塞进程，直到该进程的某个子进程结束运行为止。<br />
+它返回结束运行的子进程的PID，并将该子进程的退出状态信息存储于stat_loc参数指向的内存中。sys/wait.h头文件中定义了几个宏来帮助解释子进程的退出状态信息</p>
+<p><img alt="Pasted image 20240627200219.png" src="../../image/Pasted%20image%2020240627200219.png" /></p>
+<p>**waitpid**只等待由pid参数指定的子进程。如果pid取值为-1，那么它就和wait函数相同，即等待任意一个子进程结束。<br />
+当options的取值是WNOHANG时，waitpid调用将是非阻塞的指定的目标子进程还没有结束或意外终止，则waitpid立即返回0；如果目标子进程确实正常退出了，则waitpid返回该子进程的PID。waitpid调用失败时返回-1并设置errno。</p>
+<p><strong>当一个进程结束时，它将给其父进程发送一个SIGCHLD信号。</strong><br />
+在父进程中捕获SIGCHLD信号，并在信号处理函数中调用waitpid函数以“彻底结束”一个子进程<br />
+<div class="highlight"><pre><span></span><code>static void handle_child(int sig)
+{
+    pid_t pid;
+    int stat;
+    while((pid=waitpid(-1,＆stat,WNOHANG))＞0)
+    {
+        /*对结束的子进程进行善后处理*/
+    }
+}
+</code></pre></div></p>
+<h3 id="pipe">pipe<a class="headerlink" href="#pipe" title="Permanent link">#</a></h3>
+<p>管道能在父、子进程间传递数据，利用的是fork调用之后两个管道文件描述符（fd[0]和fd[1]）都保持打开。</p>
+<h3 id="信号量">信号量<a class="headerlink" href="#信号量" title="Permanent link">#</a></h3>
+<p>信号量（Semaphore）是一种特殊的变量，它只能取自然数值并且只支持两种操作：等待（wait）和信号（signal）。</p>
+<p>对信号量的这两种操作更常用的称呼是P、V操作。这两个字母来自于荷兰语单词passeren（传递，就好像进入临界区）和vrijgeven（释放，就好像退出临界区）。假设有信号量SV，则对它的P、V操作含义如下：</p>
+<p>❑P(SV)，如果SV的值大于0，就将它减1；如果SV的值为0，则挂起进程的执行。<br />
+❑V(SV)，如果有其他进程因为等待SV而挂起，则唤醒之；如果没有，则将SV加1。</p>
+<p>Linux信号量的API都定义在sys/sem.h头文件中，主要包含3个系统调用：semget、semop和semctl。</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/sem.h＞
+
+int semget(key_t key,int num_sems,int sem_flags);
+</code></pre></div>
+<p>semget系统调用创建一个新的信号量集，或者获取一个已经存在的信号量集。</p>
+<p>key参数是一个键值，用来标识一个全局唯一的信号量集，就像文件名全局唯一地标识一个文件一样。要通过信号量通信的进程需要使用相同的键值来创建/获取该信号量。</p>
+<p>图　13-2　使用信号量保护关键代码段<br />
+在图13-2中，当关键代码段可用时，二进制信号量SV的值为1，进程A和B都有机会进入关键代码段。如果此时进程A执行了P(SV)操作将SV减1，则进程B若再执行P(SV)操作就会被挂起。直到进程A离开关键代码段，并执行V(SV)操作将SV加1，关键代码段才重新变得可用。如果此时进程B因为等待SV而处于挂起状态，则它将被唤醒，并进入关键代码段。同样，这时进程A如果再执行P(SV)操作，则也只能被操作系统挂起以等待进程B退出关键代码段。</p>
+<p>注意　使用一个普通变量来模拟二进制信号量是行不通的，因为所有高级语言都没有一个原子操作可以同时完成如下两步操作：检测变量是否为true/false，如果是则再将它设置为false/true。</p>
+<p>Linux信号量的API都定义在sys/sem.h头文件中，主要包含3个系统调用：semget、semop和semctl。它们都被设计为操作一组信号量，即信号量集，而不是单个信号量，因此这些接口看上去多少比我们期望的要复杂一点。我们将分3小节依次讨论之。</p>
+<p>13.5.2　semget系统调用<br />
+semget系统调用创建一个新的信号量集，或者获取一个已经存在的信号量集。其定义如下：</p>
+<h1 id="includesyssemh">include＜sys/sem.h＞<a class="headerlink" href="#includesyssemh" title="Permanent link">#</a></h1>
+<p>int semget(key_t key,int num_sems,int sem_flags);</p>
+<p>key参数是一个键值，用来标识一个全局唯一的信号量集，就像文件名全局唯一地标识一个文件一样。要通过信号量通信的进程需要使用相同的键值来创建/获取该信号量。</p>
+<p>num_sems参数指定要创建/获取的信号量集中信号量的数目。如果是创建信号量，则该值必须被指定；如果是获取已经存在的信号量，则可以把它设置为0。</p>
+<p>sem_flags参数指定一组标志。它低端的9个比特是该信号量的权限，其格式和含义都与系统调用open的mode参数相同。此外，它还可以和IPC_CREAT标志做按位“或”运算以创建新的信号量集。此时即使信号量已经存在，semget也不会产生错误。</p>
+<p>semget成功时返回一个正整数值，它是信号量集的标识符；semget失败时返回-1，并设置errno。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">semval</span><span class="p">;</span>
+<span class="cm">/*信号量的值*/</span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">semzcnt</span><span class="p">;</span>
+<span class="cm">/*等待信号量值变为0的进程数量*/</span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">semncnt</span><span class="p">;</span>
+<span class="cm">/*等待信号量值增加的进程数量*/</span>
+
+<span class="kt">pid_t</span><span class="w"> </span><span class="n">sempid</span><span class="p">;</span>
+<span class="cm">/*最后一次执行semop操作的进程ID*/</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">semop</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sem_id</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">sembuf</span><span class="o">*</span><span class="n">sem_ops</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">num_sem_ops</span><span class="p">);</span>
+</code></pre></div>
+<p>sem_id参数是由semget调用返回的信号量集标识符，用以指定被操作的目标信号量集。</p>
+<p>sem_ops参数指向一个sembuf结构体类型的数组，sembuf结构体的定义<br />
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">sembuf</span><span class="p">{</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sem_num</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sem_op</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sem_flg</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>sem_num成员是信号量集中信号量的编号，0表示信号量集中的第一个信号量。<br />
+sem_op成员指定操作类型，其可选值为正整数、0和负整数。<br />
+sem_flg的可选值是IPC_NOWAIT和SEM_UNDO。<br />
+- IPC_NOWAIT的含义是，无论信号量操作是否成功，semop调用都将立即返回<br />
+-  SEM_UNDO的含义是，当进程退出时取消正在进行的semop操作。</p>
+<ul>
+<li>如果sem_op大于0，则semop将被操作的信号量的值semval增加sem_op。该操作要求调用进程对被操作信号量集拥有写权限。</li>
+<li>如果sem_op等于0，则表示这是一个“等待0”（wait-for-zero）操作。该操作要求调用进程对被操作信号量集拥有读权限。</li>
+<li>如果sem_op小于0，则表示对信号量值进行减操作，即期望获得信号量。该操作要求调用进程对被操作信号量集拥有写权限。</li>
+</ul>
+<p>semop成功时返回0，失败则返回-1并设置errno。失败的时候，sem_ops数组中指定的所有操作都不被执行。</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/sem.h＞
+
+int semctl(int sem_id,int sem_num,int command,...);
+</code></pre></div>
+<p>semctl系统调用允许调用者对信号量进行直接控制。</p>
+<p>sem_id参数是由semget调用返回的信号量集标识符，用以指定被操作的信号量集<br />
+sem_num参数指定被操作的信号量在信号量集中的编号。<br />
+command参数指定要执行的命令。有的命令需要调用者传递第4个参数。第4个参数的类型由用户自己定义，但sys/sem.h头文件给出了它的推荐格式<br />
+<div class="highlight"><pre><span></span><code><span class="k">union</span><span class="w"> </span><span class="nc">semun</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">;</span><span class="cm">/*用于SETVAL命令*/</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">semid_ds</span><span class="o">*</span><span class="n">buf</span><span class="p">;</span><span class="cm">/*用于IPC_STAT和IPC_SET命令*/</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="o">*</span><span class="n">array</span><span class="p">;</span><span class="cm">/*用于GETALL和SETALL命令*/</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">seminfo</span><span class="o">*</span><span class="n">__buf</span><span class="p">;</span><span class="cm">/*用于IPC_INFO命令*/</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">seminfo</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semmap</span><span class="p">;</span><span class="cm">/*Linux内核没有使用*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semmni</span><span class="p">;</span><span class="cm">/*系统最多可以拥有的信号量集数目*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semmns</span><span class="p">;</span><span class="cm">/*系统最多可以拥有的信号量数目*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semmnu</span><span class="p">;</span><span class="cm">/*Linux内核没有使用*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semmsl</span><span class="p">;</span><span class="cm">/*一个信号量集最多允许包含的信号量数目*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semopm</span><span class="p">;</span><span class="cm">/*semop一次最多能执行的sem_op操作数目*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semume</span><span class="p">;</span><span class="cm">/*Linux内核没有使用*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semusz</span><span class="p">;</span><span class="cm">/*sem_undo结构体的大小*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semvmx</span><span class="p">;</span><span class="cm">/*最大允许的信号量值*/</span>
+<span class="w">    </span><span class="cm">/*最多允许的UNDO次数（带SEM_UNDO标志的semop操作的次数）*/</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">semaem</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>semctl支持的所有命令<br />
+<img alt="Pasted image 20240627202504.png" src="../../image/Pasted%20image%2020240627202504.png" />GETNCNT、GETPID、GETVAL、GETZCNT和SETVAL操作的是单个信号量，它是由标识符sem_id指定的信号量集中的第sem_num个信号量；而其他操作针对的是整个信号量集，此时semctl的参数sem_num被忽略。</p>
+<h3 id="共享内存">共享内存<a class="headerlink" href="#共享内存" title="Permanent link">#</a></h3>
+<p>共享内存是最高效的IPC机制，因为它不涉及进程之间的任何数据传输。</p>
+<h4 id="shmget系统调用">shmget系统调用<a class="headerlink" href="#shmget系统调用" title="Permanent link">#</a></h4>
+<p>shmget系统调用创建一段新的共享内存，或者获取一段已经存在的共享内存。</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/shm.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">shmget</span><span class="p">(</span><span class="kt">key_t</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">shmflg</span><span class="p">);</span>
+</code></pre></div><br />
+key参数是一个键值，用来标识一段全局唯一的共享内存。<br />
+size参数指定共享内存的大小，单位是字节。如果是创建新的共享内存，则size值必须被指定。如果是获取已经存在的共享内存，则可以把size设置为0。<br />
+hmflg参数的使用和含义与semget系统调用的sem_flags参数相同。<br />
+❑SHM_HUGETLB，类似于mmap的MAP_HUGETLB标志，系统将使用“大页面”来为共享内存分配空间。<br />
+❑SHM_NORESERVE，类似于mmap的MAP_NORESERVE标志，不为共享内存保留交换分区（swap空间）。这样，当物理内存不足的时候，对该共享内存执行写操作将触发SIGSEGV信号。</p>
+<p>shmget成功时返回一个正整数值，它是共享内存的标识符。shmget失败时返回-1，并设置errno。</p>
+<h4 id="shmat和shmdt系统调用">shmat和shmdt系统调用<a class="headerlink" href="#shmat和shmdt系统调用" title="Permanent link">#</a></h4>
+<p>共享内存被创建/获取之后，我们不能立即访问它，而是需要先将它关联到进程的地址空间中。使用完共享内存之后，我们也需要将它从进程地址空间中分离。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/shm.h＞</span>
+
+<span class="kt">void</span><span class="o">*</span><span class="nf">shmat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">shm_id</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="n">shm_addr</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">shmflg</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">shmdt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="n">shm_addr</span><span class="p">);</span>
+</code></pre></div>
+<p>shm_id参数是由shmget调用返回的共享内存标识符。<br />
+shm_addr参数指定将共享内存关联到进程的哪块地址空间<br />
+shmflg参数的可选标志SHM_RND的影响：<br />
+❑如果shm_addr为NULL，则被关联的地址由操作系统选择。这是推荐的做法，以确保代码的可移植性。<br />
+❑如果shm_addr非空，并且SHM_RND标志未被设置，则共享内存被关联到addr指定的地址处。<br />
+❑如果shm_addr非空，并且设置了SHM_RND标志，则被关联的地址是[shm_addr-(shm_addr%SHMLBA)]。SHMLBA的含义是“段低端边界地址倍数”（Segment Low Boundary Address Multiple），它必须是内存页面大小（PAGE_SIZE）的整数倍。<br />
+❑SHM_RDONLY。进程仅能读取共享内存中的内容。若没有指定该标志，则进程可同时对共享内存进行读写操作（当然，这需要在创建共享内存的时候指定其读写权限）。<br />
+❑SHM_REMAP。如果地址shmaddr已经被关联到一段共享内存上，则重新关联。<br />
+❑SHM_EXEC。它指定对共享内存段的执行权限。对共享内存而言，执行权限实际上和读权限是一样的。</p>
+<p>shmat成功时返回共享内存被关联到的地址，失败则返回(void*)-1并设置errno。shmat成功时，将修改内核数据结构shmid_ds的部分字段，如下：<br />
+❑将shm_nattach加1。<br />
+❑将shm_lpid设置为调用进程的PID。<br />
+❑将shm_atime设置为当前的时间。</p>
+<p>shmdt函数将关联到shm_addr处的共享内存从进程中分离。它成功时返回0，失败则返回-1并设置errno。shmdt在成功调用时将修改内核数据结构shmid_ds的部分字段，如下：<br />
+❑将shm_nattach减1。<br />
+❑将shm_lpid设置为调用进程的PID。<br />
+❑将shm_dtime设置为当前的时间。</p>
+<h4 id="shmctl系统调用">shmctl系统调用<a class="headerlink" href="#shmctl系统调用" title="Permanent link">#</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/shm.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">shmctl</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">shm_id</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">command</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">shmid_ds</span><span class="o">*</span><span class="n">buf</span><span class="p">);</span>
+</code></pre></div><br />
+shm_id参数是由shmget调用返回的共享内存标识符。<br />
+command参数指定要执行的命令。<br />
+shmctl支持的所有命令如表</p>
+<p><img alt="Pasted image 20240627204358.png" src="../../image/Pasted%20image%2020240627204358.png" /></p>
+<h4 id="共享内存的posix方法">共享内存的POSIX方法<a class="headerlink" href="#共享内存的posix方法" title="Permanent link">#</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/mman.h＞</span>
+<span class="cp">#include＜sys/stat.h＞</span>
+<span class="cp">#include＜fcntl.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">shm_open</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="n">name</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">oflag</span><span class="p">,</span><span class="kt">mode_t</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+</code></pre></div><br />
+shm_open的使用方法与open系统调用完全相同。<br />
+name参数指定要创建/打开的共享内存对象。<br />
+oflag参数指定创建方式。<br />
+❑O_RDONLY。以只读方式打开共享内存对象。<br />
+❑O_RDWR。以可读、可写方式打开共享内存对象。<br />
+❑O_CREAT。如果共享内存对象不存在，则创建之。此时mode参数的最低9位将指定该共享内存对象的访问权限。共享内存对象被创建的时候，其初始长度为0。<br />
+❑O_EXCL。和O_CREAT一起使用，如果由name指定的共享内存对象已经存在，则shm_open调用返回错误，否则就创建一个新的共享内存对象。<br />
+❑O_TRUNC。如果共享内存对象已经存在，则把它截断，使其长度为0。</p>
+<p>shm_open调用成功时返回一个文件描述符。该文件描述符可用于后续的mmap调用，从而将共享内存关联到调用进程。shm_open失败时返回-1，并设置errno。</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">shm_unlink</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="n">name</span><span class="p">);</span>
+</code></pre></div><br />
+该函数将name参数指定的共享内存对象标记为等待删除。当所有使用该共享内存对象的进程都使用ummap将它从进程中分离之后，系统将销毁这个共享内存对象所占据的资源。</p>
+<p><a href="../src/test_shm.cpp">test_shm.cpp</a></p>
+<h3 id="消息队列">消息队列<a class="headerlink" href="#消息队列" title="Permanent link">#</a></h3>
+<p>消息队列是在两个进程之间传递二进制块数据的一种简单有效的方式。每个数据块都有一个特定的类型，接收方可以根据类型来有选择地接收数据，而不一定像管道和命名管道那样必须以先进先出的方式接收数据。</p>
+<h4 id="msgget系统调用">msgget系统调用<a class="headerlink" href="#msgget系统调用" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/msg.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">msgget</span><span class="p">(</span><span class="kt">key_t</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">msgflg</span><span class="p">);</span>
+</code></pre></div>
+<p>key参数是一个键值，用来标识一个全局唯一的消息队列。<br />
+msgflg参数使用和含义与semget系统调用的sem_flags参数相同。</p>
+<p>msgget成功时返回一个正整数值，它是消息队列的标识符。msgget失败时返回-1，并设置errno。</p>
+<p>如果msgget用于创建消息队列，则与之关联的内核数据结构msqid_ds将被创建并初始化。msqid_ds结构体的定义<br />
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">msqid_ds</span>
+
+<span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">ipc_perm</span><span class="w"> </span><span class="n">msg_perm</span><span class="p">;</span><span class="cm">/*消息队列的操作权限*/</span>
+<span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">msg_stime</span><span class="p">;</span><span class="cm">/*最后一次调用msgsnd的时间*/</span>
+<span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">msg_rtime</span><span class="p">;</span><span class="cm">/*最后一次调用msgrcv的时间*/</span>
+<span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">msg_ctime</span><span class="p">;</span><span class="cm">/*最后一次被修改的时间*/</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">long__msg_cbytes</span><span class="p">;</span><span class="cm">/*消息队列中已有的字节数*/</span>
+<span class="w">    </span><span class="n">msgqnum_t</span><span class="w"> </span><span class="n">msg_qnum</span><span class="p">;</span><span class="cm">/*消息队列中已有的消息数*/</span>
+<span class="w">    </span><span class="n">msglen_t</span><span class="w"> </span><span class="n">msg_qbytes</span><span class="p">;</span><span class="cm">/*消息队列允许的最大字节数*/</span>
+<span class="w">    </span><span class="kt">pid_t</span><span class="w"> </span><span class="n">msg_lspid</span><span class="p">;</span><span class="cm">/*最后执行msgsnd的进程的PID*/</span>
+<span class="w">    </span><span class="kt">pid_t</span><span class="w"> </span><span class="n">msg_lrpid</span><span class="p">;</span><span class="cm">/*最后执行msgrcv的进程的PID*/</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<h4 id="msgsnd系统调用">msgsnd系统调用<a class="headerlink" href="#msgsnd系统调用" title="Permanent link">#</a></h4>
+<p>msgsnd系统调用把一条消息添加到消息队列中。<br />
+<div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/msg.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">msgsnd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">msqid</span><span class="p">,</span><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="n">msg_ptr</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">msg_sz</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">msgflg</span><span class="p">);</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">msgbuf</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">mtype</span><span class="p">;</span><span class="cm">/*消息类型*/</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">mtext</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span><span class="cm">/*消息数据*/</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p>msqid参数是由msgget调用返回的消息队列标识符。<br />
+msg_ptr参数指向一个准备发送的消息<br />
+    mtype成员指定消息的类型，它必须是一个正整数。mtext是消息数据。<br />
+msg_sz参数是消息的数据部分（mtext）的长度。这个长度可以为0，表示没有消息数据。<br />
+msgflg参数控制msgsnd的行为。它通常仅支持IPC_NOWAIT标志，即以非阻塞的方式发送消息。默认情况下，发送消息时如果消息队列满了，则msgsnd将阻塞。若IPC_NOWAIT标志被指定，则msgsnd将立即返回并设置errno为EAGAIN。</p>
+<h4 id="msgrcv系统调用">msgrcv系统调用<a class="headerlink" href="#msgrcv系统调用" title="Permanent link">#</a></h4>
+<p>msgrcv系统调用从消息队列中获取消息。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">msgrcv</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">msqid</span><span class="p">,</span><span class="kt">void</span><span class="o">*</span><span class="n">msg_ptr</span><span class="p">,</span><span class="kt">size_t</span><span class="w"> </span><span class="n">msg_sz</span><span class="p">,</span><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">msgtype</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">msgflg</span><span class="p">);</span>
+</code></pre></div>
+<p>msqid参数是由msgget调用返回的消息队列标识符。<br />
+msg_ptr参数用于存储接收的消息，msg_sz参数指的是消息数据部分的长度。<br />
+msgtype参数指定接收何种类型的消息。我们可以使用如下几种方式来指定消息类型：<br />
+❑msgtype等于0。读取消息队列中的第一个消息。<br />
+❑msgtype大于0。读取消息队列中第一个类型为msgtype的消息（除非指定了标志MSG_EXCEPT，见后文）。<br />
+❑msgtype小于0。读取消息队列中第一个类型值比msgtype的绝对值小的消息。</p>
+<p>参数msgflg控制msgrcv函数的行为。它可以是如下一些标志的按位或：<br />
+❑IPC_NOWAIT。如果消息队列中没有消息，则msgrcv调用立即返回并设置errno为ENOMSG。<br />
+❑MSG_EXCEPT。如果msgtype大于0，则接收消息队列中第一个非msgtype类型的消息。<br />
+❑MSG_NOERROR。如果消息数据部分的长度超过了msg_sz，就将它截断。</p>
+<p>处于阻塞状态的msgrcv调用还可能被如下两种异常情况所中断：<br />
+❑消息队列被移除。此时msgrcv调用将立即返回并设置errno为EIDRM。<br />
+❑程序接收到信号。此时msgrcv调用将立即返回并设置errno为EINTR。<br />
+msgrcv成功时返回0，失败则返回-1并设置errno。msgrcv成功时将修改内核数据结构msqid_ds的部分字段，如下所示：<br />
+    ❑将msg_qnum减1。<br />
+    ❑将msg_lrpid设置为调用进程的PID。<br />
+    ❑将msg_rtime设置为当前的时间。</p>
+<h4 id="msgctl系统调用">msgctl系统调用<a class="headerlink" href="#msgctl系统调用" title="Permanent link">#</a></h4>
+<p>msgctl系统调用控制消息队列的某些属性。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include＜sys/msg.h＞</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">msgctl</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">msqid</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">command</span><span class="p">,</span><span class="k">struct</span><span class="w"> </span><span class="nc">msqid_ds</span><span class="o">*</span><span class="n">buf</span><span class="p">);</span>
+</code></pre></div>
+<p>msqid参数是由msgget调用返回的共享内存标识符。<br />
+command参数指定要执行的命令。<br />
+<img alt="Pasted image 20240627211553.png" src="../../image/Pasted%20image%2020240627211553.png" /></p>
+<p>msgctl成功时的返回值取决于command参数, msgctl函数失败时返回-1并设置errno。</p>
+<h3 id="socket传递">socket传递<a class="headerlink" href="#socket传递" title="Permanent link">#</a></h3>
+<p>可以利用UNIX域socket在进程间传递特殊的辅助数据，以实现文件描述符的传递</p>
+<p><a href="../src/test_socket_share_process.cpp">test_socket_share_process.cpp</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../network_cmds/" title="Network cmds" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Network cmds
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../quick_script/" title="Quick script" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Quick script
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["navigation.expand", "tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

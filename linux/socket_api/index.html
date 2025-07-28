@@ -1,0 +1,2312 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Socket api - myob</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="myob" class="md-header-nav__button md-logo" aria-label="myob">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            myob
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Socket api
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../book/efficient_at_linux_command_line/" class="md-tabs__link">
+          Book
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../cpp/array_float/" class="md-tabs__link">
+          Cpp
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../fpga/xlnx/" class="md-tabs__link">
+          Fpga
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../fw/debian_eth_name/" class="md-tabs__link">
+          Fw
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../IO_API/" class="md-tabs__link md-tabs__link--active">
+          Linux
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../sonic/MySonic/" class="md-tabs__link">
+          Sonic
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tools/cisco_router/" class="md-tabs__link">
+          Tools
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../wiki/100G_KP4_KR4/" class="md-tabs__link">
+          Wiki
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../win/Quick_Key/" class="md-tabs__link">
+          Win
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myob" class="md-nav__button md-logo" aria-label="myob">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    myob
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Book
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Book" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Book
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/efficient_at_linux_command_line/" title="Efficient at linux command line" class="md-nav__link">
+      Efficient at linux command line
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E5%9F%BA%E4%BA%8EYANG%E7%9A%84%E5%8F%AF%E7%BC%96%E7%A8%8B%E7%BD%91%E7%BB%9C/" title="基于YANG的可编程网络" class="md-nav__link">
+      基于YANG的可编程网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E7%8E%B0%E4%BB%A3C%2B%2B/" title="现代C++" class="md-nav__link">
+      现代C++
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../book/%E7%8E%B0%E4%BB%A3cpp%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/" title="现代cpp软件架构" class="md-nav__link">
+      现代cpp软件架构
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cpp
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Cpp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/array_float/" title="Array float" class="md-nav__link">
+      Array float
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/bazel/" title="Bazel" class="md-nav__link">
+      Bazel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/c_misc/" title="C misc" class="md-nav__link">
+      C misc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/cmake/" title="Cmake" class="md-nav__link">
+      Cmake
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/cpp_container/" title="Cpp container" class="md-nav__link">
+      Cpp container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/gdb/" title="Gdb" class="md-nav__link">
+      Gdb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/grpc/" title="Grpc" class="md-nav__link">
+      Grpc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/timestamp/" title="Timestamp" class="md-nav__link">
+      Timestamp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cpp/vcpkg/" title="Vcpkg" class="md-nav__link">
+      Vcpkg
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Fpga
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Fpga" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Fpga
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fpga/xlnx/" title="Xlnx" class="md-nav__link">
+      Xlnx
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Fw
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Fw" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Fw
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/debian_eth_name/" title="Debian eth name" class="md-nav__link">
+      Debian eth name
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/devicetree/" title="Devicetree" class="md-nav__link">
+      Devicetree
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/gpiod/" title="Gpiod" class="md-nav__link">
+      Gpiod
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fw/ramdisk/" title="Ramdisk" class="md-nav__link">
+      Ramdisk
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Linux
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linux" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_API/" title="IO API" class="md-nav__link">
+      IO API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../IO_multiplexing/" title="IO multiplexing" class="md-nav__link">
+      IO multiplexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apt/" title="Apt" class="md-nav__link">
+      Apt
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic_api/" title="Basic api" class="md-nav__link">
+      Basic api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../centos7/" title="Centos7" class="md-nav__link">
+      Centos7
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coredump/" title="Coredump" class="md-nav__link">
+      Coredump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gpio/" title="Gpio" class="md-nav__link">
+      Gpio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../inbox/" title="Inbox" class="md-nav__link">
+      Inbox
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iptables_nat/" title="Iptables nat" class="md-nav__link">
+      Iptables nat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kernel_prameter/" title="Kernel prameter" class="md-nav__link">
+      Kernel prameter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux_signal/" title="Linux signal" class="md-nav__link">
+      Linux signal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../misc_cmds/" title="Misc cmds" class="md-nav__link">
+      Misc cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network_cmds/" title="Network cmds" class="md-nav__link">
+      Network cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../process/" title="Process" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick_script/" title="Quick script" class="md-nav__link">
+      Quick script
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serial_console/" title="Serial console" class="md-nav__link">
+      Serial console
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Socket api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Socket api" class="md-nav__link md-nav__link--active">
+      Socket api
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#大端" class="md-nav__link">
+    大端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket地址" class="md-nav__link">
+    socket地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip地址转换函数" class="md-nav__link">
+    IP地址转换函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    socket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    listen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accept" class="md-nav__link">
+    accept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    connect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recv_send" class="md-nav__link">
+    recv_send
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recvfrom_sendto" class="md-nav__link">
+    recvfrom_sendto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recvmg_sendmfg" class="md-nav__link">
+    recvmg_sendmfg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#带外标记" class="md-nav__link">
+    带外标记
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#地址信息函数" class="md-nav__link">
+    地址信息函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socket选项" class="md-nav__link">
+    socket选项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#网络信息api" class="md-nav__link">
+    网络信息API
+  </a>
+  
+    <nav class="md-nav" aria-label="网络信息API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getservbyname和getservbyport" class="md-nav__link">
+    getservbyname和getservbyport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaddrinfo" class="md-nav__link">
+    getaddrinfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnameinfo" class="md-nav__link">
+    getnameinfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ssh/" title="Ssh" class="md-nav__link">
+      Ssh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../system_cmds/" title="System cmds" class="md-nav__link">
+      System cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../thread/" title="Thread" class="md-nav__link">
+      Thread
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Sonic
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Sonic" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Sonic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/MySonic/" title="MySonic" class="md-nav__link">
+      MySonic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/redis_basic/" title="Redis basic" class="md-nav__link">
+      Redis basic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/sonic-common/" title="Sonic common" class="md-nav__link">
+      Sonic common
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sonic/swss-common-dockerdb11/" title="Swss common dockerdb11" class="md-nav__link">
+      Swss common dockerdb11
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/cisco_router/" title="Cisco router" class="md-nav__link">
+      Cisco router
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/clang-format/" title="Clang format" class="md-nav__link">
+      Clang format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/express/" title="Express" class="md-nav__link">
+      Express
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/grep_sed_ack/" title="Grep sed ack" class="md-nav__link">
+      Grep sed ack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/helix/" title="Helix" class="md-nav__link">
+      Helix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/lsyncd/" title="Lsyncd" class="md-nav__link">
+      Lsyncd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/sqlite/" title="Sqlite" class="md-nav__link">
+      Sqlite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/vim/" title="Vim" class="md-nav__link">
+      Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/vscode/" title="Vscode" class="md-nav__link">
+      Vscode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tools/windowterminal/" title="Windowterminal" class="md-nav__link">
+      Windowterminal
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Wiki
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Wiki" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Wiki
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/100G_KP4_KR4/" title="100G KP4 KR4" class="md-nav__link">
+      100G KP4 KR4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/Cpp%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="Cpp技术面试基础知识总结" class="md-nav__link">
+      Cpp技术面试基础知识总结
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/OTU/" title="OTU" class="md-nav__link">
+      OTU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/TCP_IP/" title="TCP IP" class="md-nav__link">
+      TCP IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/aes/" title="Aes" class="md-nav__link">
+      Aes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/altera/" title="Altera" class="md-nav__link">
+      Altera
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/k8s/" title="K8s" class="md-nav__link">
+      K8s
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/linux_misc_cmds/" title="Linux misc cmds" class="md-nav__link">
+      Linux misc cmds
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/ntp/" title="Ntp" class="md-nav__link">
+      Ntp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/opengrok/" title="Opengrok" class="md-nav__link">
+      Opengrok
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/optical_module/" title="Optical module" class="md-nav__link">
+      Optical module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/optical_parameters/" title="Optical parameters" class="md-nav__link">
+      Optical parameters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/ptp/" title="Ptp" class="md-nav__link">
+      Ptp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/qsfp/" title="Qsfp" class="md-nav__link">
+      Qsfp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/vrf/" title="Vrf" class="md-nav__link">
+      Vrf
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/xilinx/" title="Xilinx" class="md-nav__link">
+      Xilinx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wiki/zellij/" title="Zellij" class="md-nav__link">
+      Zellij
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Win
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Win" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        Win
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/Quick_Key/" title="Quick Key" class="md-nav__link">
+      Quick Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/msys/" title="Msys" class="md-nav__link">
+      Msys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/vscode/" title="Vscode" class="md-nav__link">
+      Vscode
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-arch/" title="Wsl arch" class="md-nav__link">
+      Wsl arch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-debian/" title="Wsl debian" class="md-nav__link">
+      Wsl debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-debian11/" title="Wsl debian11" class="md-nav__link">
+      Wsl debian11
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl-ubuntu/" title="Wsl ubuntu" class="md-nav__link">
+      Wsl ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../win/wsl/" title="Wsl" class="md-nav__link">
+      Wsl
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    API
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#大端" class="md-nav__link">
+    大端
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket地址" class="md-nav__link">
+    socket地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip地址转换函数" class="md-nav__link">
+    IP地址转换函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    socket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listen" class="md-nav__link">
+    listen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accept" class="md-nav__link">
+    accept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    connect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recv_send" class="md-nav__link">
+    recv_send
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recvfrom_sendto" class="md-nav__link">
+    recvfrom_sendto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recvmg_sendmfg" class="md-nav__link">
+    recvmg_sendmfg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#带外标记" class="md-nav__link">
+    带外标记
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#地址信息函数" class="md-nav__link">
+    地址信息函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socket选项" class="md-nav__link">
+    socket选项
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#网络信息api" class="md-nav__link">
+    网络信息API
+  </a>
+  
+    <nav class="md-nav" aria-label="网络信息API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getservbyname和getservbyport" class="md-nav__link">
+    getservbyname和getservbyport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getaddrinfo" class="md-nav__link">
+    getaddrinfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getnameinfo" class="md-nav__link">
+    getnameinfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>Socket api</h1>
+                
+                <h3 id="api">API<a class="headerlink" href="#api" title="Permanent link">#</a></h3>
+<h4 id="大端">大端<a class="headerlink" href="#大端" title="Permanent link">#</a></h4>
+<p>字节序分为大端字节序（big endian）和小端字节序（little endian）。大端字节序是指一个整数的高位字节（23～31 bit）存储在内存的低地址处，低位字节（0～7 bit）存储在内存的高地址处。小端字节序则是指整数的高位字节存储在内存的高地址处，而低位字节则存储在内存的低地址处。</p>
+<p><a href="../src/byteorder.c">byteorder.c</a></p>
+<p>在两台使用不同字节序的主机之间直接传递时，接收端必然错误地解释之。解决问题的方法是：发送端总是把要发送的数据转化成大端字节序数据后再发送，而接收端知道对方传送过来的数据总是采用大端字节序，所以接收端可以根据自身采用的字节序决定是否对接收到的数据进行转换(小端机转换，大端机不转换).</p>
+<p><strong>大端字节序也称为网络字节序</strong>，它给所有接收数据的主机提供了一个正确解释收到的格式化数据的保证。<br />
+Linux提供了如下4个函数来完成主机字节序和网络字节序之间的转换：</p>
+<div class="highlight"><pre><span></span><code>#include＜netinet/in.h＞
+//host to network long
+unsigned long int htonl(unsigned long int hostlong);
+unsigned short int htons(unsigned short int hostshort);
+
+unsigned long int ntohl(unsigned long int netlong);
+unsigned short int ntohs(unsigned short int netshort);
+</code></pre></div>
+<h4 id="socket地址">socket地址<a class="headerlink" href="#socket地址" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>#include＜bits/socket.h＞
+
+struct sockaddr
+{
+    sa_family_t sa_family;
+    char sa_data[14];
+}
+</code></pre></div>
+<ul>
+<li>
+<p>sa_family成员是地址族类型（sa_family_t）的变量。地址族类型通常与协议族类型对应。<br />
+<img alt="Pasted image 20240623161757.png" src="../../image/Pasted%20image%2020240623161757.png" /></p>
+</li>
+<li>
+<p>sa_data成员用于存放socket地址值。<br />
+<img alt="Pasted image 20240623161838.png" src="../../image/Pasted%20image%2020240623161838.png" /></p>
+</li>
+<li>
+<p>14字节的sa_data根本无法完全容纳多数协议族的地址值。因此，Linux定义了下面这个新的通用socket地址结构体<br />
+<div class="highlight"><pre><span></span><code>#include＜bits/socket.h＞
+
+struct sockaddr_storage
+{
+    sa_family_t sa_family;
+    unsigned long int__ss_align;
+    char__ss_padding[128-sizeof(__ss_align)];
+}
+</code></pre></div></p>
+</li>
+<li>
+<p>Linux为各个协议族提供了专门的socket地址结构体。<br />
+<div class="highlight"><pre><span></span><code>#include＜sys/un.h＞
+
+struct sockaddr_un
+{
+    sa_family_t sin_family;/*地址族：AF_UNIX*/
+    char sun_path[108];/*文件路径名*/
+};
+
+struct sockaddr_in
+{
+    sa_family_t sin_family; /*地址族：AF_INET*
+    u_int16_t sin_port; /*端口号，要用网络字节序表示*/
+    struct in_addr sin_addr; /*IPv4地址结构体，见下面*/
+};
+struct in_addr
+{
+    u_int32_t s_addr; /*IPv4地址，要用网络字节序表示*/
+};
+
+struct sockaddr_in6
+{
+    sa_family_t sin6_family; /*地址族：AF_INET6*/
+    u_int16_t sin6_port; /*端口号，要用网络字节序表示*/
+    u_int32_t sin6_flowinfo; /*流信息，应设置为0*/
+    struct in6_addr sin6_addr; /*IPv6地址结构体，见下面*/
+    u_int32_t sin6_scope_id; /*scope ID，尚处于实验阶段*/
+};
+struct in6_addr
+{
+    unsigned char sa_addr[16]; /*IPv6地址，要用网络字节序表示*/
+};
+</code></pre></div></p>
+</li>
+</ul>
+<h4 id="ip地址转换函数">IP地址转换函数<a class="headerlink" href="#ip地址转换函数" title="Permanent link">#</a></h4>
+<p>用点分十进制字符串表示IPv4地址，以及用十六进制字符串表示IPv6地址。<br />
+用于用点分十进制字符串表示的IPv4地址和用网络字节序整数表示的IPv4地址之间的转换<br />
+<div class="highlight"><pre><span></span><code>#include＜arpa/inet.h＞
+
+in_addr_t inet_addr(const char*strptr);
+int inet_aton(const char*cp,struct in_addr*inp);
+char* inet_ntoa(struct in_addr in);
+
+int inet_pton(int af,const char*src,void*dst);
+const char*inet_ntop(int af,const void*src,char*dst,socklen_t cnt);
+
+#define INET_ADDRSTRLEN 16
+#define INET6_ADDRSTRLEN 46
+</code></pre></div><br />
+- inet_addr函数将用点分十进制字符串表示的IPv4地址转化为用网络字节序整数表示的IPv4地址。它失败时返回INADDR_NONE。<br />
+- inet_aton函数完成和inet_addr同样的功能，但是将转化结果存储于参数inp指向的地址结构中。它成功时返回1，失败则返回0。<br />
+- inet_ntoa函数将用网络字节序整数表示的IPv4地址转化为用点分十进制字符串表示的IPv4地址。<br />
+- inet_pton函数将用字符串表示的IP地址src（用点分十进制字符串表示的IPv4地址或用十六进制字符串表示的IPv6地址）转换成用网络字节序整数表示的IP地址，并把转换结果存储于dst指向的内存中。<br />
+    - af参数指定地址族，可以是AF_INET或者AF_INET6。<br />
+    - inet_pton成功时返回1，失败则返回0并设置errno<br />
+- net_ntop函数进行相反的转换，前三个参数的含义与inet_pton的参数相同，最后一个参数cnt指定目标存储单元的大小。</p>
+<h3 id="socket">socket<a class="headerlink" href="#socket" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+int socket(int domain,int type,int protocol);
+</code></pre></div>
+<p>domain参数告诉系统使用哪个底层协议族。<br />
+    对TCP/IP协议族而言，该参数应该设置为PF_INET（Protocol Family of Internet，用于IPv4）或PF_INET6（用于IPv6）；<br />
+    对于UNIX本地域协议族而言，该参数应该设置为PF_UNIX。</p>
+<p>type参数指定服务类型。服务类型主要有SOCK_STREAM服务（流服务）和SOCK_UGRAM（数据报）服务。<br />
+    对TCP/IP协议族而言，其值取SOCK_STREAM表示传输层使用TCP协议，取SOCK_DGRAM表示传输层使用UDP协议。</p>
+<div class="codehilite"><pre><span></span><code>type参数可以接受上述服务类型与下面两个重要的标志相与的值：SOCK_NONBLOCK和SOCK_CLOEXEC。它们分别表示将新创建的socket设为非阻塞的，以及用fork调用创建子进程时在子进程中关闭该socket。
+</code></pre></div>
+
+<p>protocol参数是在前两个参数构成的协议集合下，再选择一个具体的协议。不过这个值通常都是唯一的（前两个参数已经完全决定了它的值）。几乎在所有情况下，我们都应该把它设置为0，表示使用默认协议。</p>
+<p>socket系统调用成功时返回一个socket文件描述符，失败则返回-1并设置errno。</p>
+<h3 id="bind">bind<a class="headerlink" href="#bind" title="Permanent link">#</a></h3>
+<p>在服务器程序中，我们通常要命名socket，因为只有命名后客户端才能知道该如何连接它。客户端则通常不需要命名socket，而是采用匿名方式，即使用操作系统自动分配的socket地址。命名socket的系统调用是bind，其定义如下：</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+int bind(int sockfd,const struct sockaddr*my_addr,socklen_t addrlen);
+</code></pre></div>
+<p>bind将my_addr所指的socket地址分配给未命名的sockfd文件描述符，addrlen参数指出该socket地址的长度。</p>
+<p>bind成功时返回0，失败则返回-1并设置errno。其中两种常见的errno是EACCES和EADDRINUSE，<br />
+- EACCES，被绑定的地址是受保护的地址，仅超级用户能够访问。比如普通用户将socket绑定到知名服务端口（端口号为0～1023）上时，bind将返回EACCES错误。<br />
+- EADDRINUSE，被绑定的地址正在使用中。比如将socket绑定到一个处于TIME_WAIT状态的socket地址。</p>
+<h3 id="listen">listen<a class="headerlink" href="#listen" title="Permanent link">#</a></h3>
+<p>创建一个监听队列以存放待处理的客户连接</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+int listen(int sockfd,int backlog);
+</code></pre></div>
+<ul>
+<li>sockfd参数指定被监听的socket。</li>
+<li>
+<p>backlog参数提示内核监听队列的最大长度。<br />
+    监听队列的长度如果超过backlog，服务器将不受理新的客户连接，客户端也将收到ECONNREFUSED错误信息。</p>
+<p>backlog参数是指所有处于半连接状态（SYN_RCVD）和完全连接状态（ESTABLISHED）的socket的上限。</p>
+<p>处于半连接状态的socket的上限则由/proc/sys/net/ipv4/tcp_max_syn_backlog内核参数定义。</p>
+</li>
+<li>
+<p>listen成功时返回0，失败则返回-1并设置errno。</p>
+</li>
+</ul>
+<p><a href="../src/test_listen.cpp">test_listen.cpp</a></p>
+<h3 id="accept">accept<a class="headerlink" href="#accept" title="Permanent link">#</a></h3>
+<p>从listen监听队列中接受一个连接</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+int accept(int sockfd,struct sockaddr*addr,socklen_t*addrlen);
+</code></pre></div>
+<ul>
+<li>sockfd参数是执行过listen系统调用的监听socket</li>
+<li>addr参数用来获取被接受连接的远端socket地址，该socket地址的长度由addrlen参数指出。</li>
+<li>accept成功时返回一个新的连接socket，该socket唯一地标识了被接受的这个连接，服务器可通过读写该socket来与被接受连接对应的客户端通信。accept失败时返回-1并设置errno。</li>
+</ul>
+<p><a href="../src/test_accept.cpp">test_accept.cpp</a></p>
+<h3 id="connect">connect<a class="headerlink" href="#connect" title="Permanent link">#</a></h3>
+<p>客户端需要通过如下系统调用来主动与服务器建立连接</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+int connect(int sockfd,const struct sockaddr*serv_addr,socklen_t addrlen);
+</code></pre></div>
+<ul>
+<li>sockfd参数由socket系统调用返回一个socket。</li>
+<li>serv_addr参数是服务器监听的socket地址，</li>
+<li>addrlen参数则指定这个地址的长度。</li>
+<li>connect成功时返回0。</li>
+<li>connect失败则返回-1并设置errno。<ul>
+<li>ECONNREFUSED，目标端口不存在，连接被拒绝。</li>
+<li>ETIMEDOUT，连接超时。</li>
+</ul>
+</li>
+</ul>
+<h3 id="close">close<a class="headerlink" href="#close" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜unistd.h＞
+
+int close(int fd);
+</code></pre></div>
+<p>fd参数是待关闭的socket。不过，close系统调用并非总是立即关闭一个连接，而是将fd的引用计数减1。<strong>只有当fd的引用计数为0时，才真正关闭连接</strong>。</p>
+<p>如果无论如何都要立即终止连接（而不是将socket的引用计数减1），可以使用如下的shutdown系统调用<br />
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+int shutdown(int sockfd,int howto);
+</code></pre></div></p>
+<p>sockfd参数是待关闭的socket。howto参数决定了shutdown的行为</p>
+<p><img alt="Pasted image 20240623172413.png" src="../../image/Pasted%20image%2020240623172413.png" /></p>
+<p>shutdown成功时返回0，失败则返回-1并设置errno。</p>
+<h3 id="recv_send">recv_send<a class="headerlink" href="#recv_send" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+ssize_t recv(int sockfd,void*buf,size_t len,int flags);
+
+ssize_t send(int sockfd,const void*buf,size_t len,int flags);
+</code></pre></div>
+<ul>
+<li>recv读取sockfd上的数据，buf和len参数分别指定读缓冲区的位置和大小，flags参数的含义见后文，通常设置为0即可。</li>
+<li>recv成功时返回实际读取到的数据的长度，它可能小于我们期望的长度len。因此我们可能要多次调用recv，才能读取到完整的数据。</li>
+<li>
+<p>recv可能返回0，这意味着通信对方已经关闭连接了。recv出错时返回-1并设置errno。</p>
+</li>
+<li>
+<p>send往sockfd上写入数据，buf和len参数分别指定写缓冲区的位置和大小。</p>
+</li>
+<li>send成功时返回实际写入的数据的长度，失败则返回-1并设置errno。</li>
+</ul>
+<p>flags参数为数据收发提供了额外的控制</p>
+<p><img alt="Pasted image 20240623172711.png" src="../../image/Pasted%20image%2020240623172711.png" /></p>
+<p><a href="../src/test_oob_recv.cpp">test_oob_recv.cpp</a>  <a href="../src/test_oob_send.cpp">test_oob_send.cpp</a></p>
+<h3 id="recvfrom_sendto">recvfrom_sendto<a class="headerlink" href="#recvfrom_sendto" title="Permanent link">#</a></h3>
+<p>用于UDP数据报读写的系统调用</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/types.h＞
+#include＜sys/socket.h＞
+
+ssize_t recvfrom(int sockfd,void*buf,size_t len,int flags,struct sockaddr*src_addr,socklen_t *addrlen);
+
+ssize_t sendto(int sockfd,const void*buf,size_t len,int flags,const struct sockaddr*dest_addr,socklen_t addrlen);
+</code></pre></div>
+<p>recvfrom读取sockfd上的数据，buf和len参数分别指定读缓冲区的位置和大小。因为UDP通信没有连接的概念，所以我们每次读取数据都需要获取发送端的socket地址，即参数src_addr所指的内容，addrlen参数则指定该地址的长度。</p>
+<p>sendto往sockfd上写入数据，buf和len参数分别指定写缓冲区的位置和大小。dest_addr参数指定接收端的socket地址，addrlen参数则指定该地址的长度。</p>
+<p>flags参数以及返回值的含义均与send/recv系统调用的flags参数及返回值相同。</p>
+<p>recvfrom/sendto系统调用也可以用于面向连接（STREAM）的socket的数据读写，只需要把最后两个参数都设置为NULL以忽略发送端/接收端的socket地址（因为我们已经和对方建立了连接，所以已经知道其socket地址了）</p>
+<h3 id="recvmg_sendmfg">recvmg_sendmfg<a class="headerlink" href="#recvmg_sendmfg" title="Permanent link">#</a></h3>
+<p>socket编程接口还提供了一对通用的数据读写系统调用。它们不仅能用于TCP流数据，也能用于UDP数据报</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+ssize_t recvmsg(int sockfd,struct msghdr*msg,int flags);
+
+ssize_t sendmsg(int sockfd,struct msghdr*msg,int flags);
+</code></pre></div>
+<p>sockfd参数指定被操作的目标socket。msg参数是msghdr结构体类型的指针，</p>
+<div class="highlight"><pre><span></span><code>struct msghdr
+
+{
+
+void *msg_name;/*socket地址*/
+
+socklen_t msg_namelen;/*socket地址的长度*/
+
+struct iovec*msg_iov;/*分散的内存块，见后文*/
+
+int msg_iovlen;/*分散内存块的数量*/
+
+void *msg_control;/*指向辅助数据的起始位置*/
+
+socklen_t msg_controllen;/*辅助数据的大小*/
+
+int msg_flags;/*复制函数中的flags参数，并在调用过程中更新*/
+
+};
+</code></pre></div>
+<ul>
+<li>msg_name成员指向一个socket地址结构变量。它指定通信对方的socket地址。对于面向连接的TCP协议，该成员没有意义，必须被设置为NULL。</li>
+<li>msg_namelen成员则指定了msg_name所指socket地址的长度。</li>
+<li>msg_iov成员是iovec结构体类型的指针,iovec结构体封装了一块内存的起始位置和长度。<br />
+<div class="highlight"><pre><span></span><code>struct iovec
+
+{
+void*iov_base;/*内存起始地址*/
+size_t iov_len;/*这块内存的长度*/
+};
+</code></pre></div></li>
+<li>msg_iovlen指定这样的iovec结构对象有多少个。</li>
+<li>msg_control和msg_controllen成员用于辅助数据的传送。</li>
+<li>msg_flags成员无须设定，它会复制recvmsg/sendmsg的flags参数的内容以影响数据读写过程。</li>
+</ul>
+<h3 id="带外标记">带外标记<a class="headerlink" href="#带外标记" title="Permanent link">#</a></h3>
+<p>Linux内核检测到TCP紧急标志时，将通知应用程序有带外数据需要接收。内核通知应用程序带外数据到达的两种常见方式是：I/O复用产生的异常事件和SIGURG信号。</p>
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+int sockatmark(int sockfd);
+</code></pre></div>
+<p>sockatmark判断sockfd是否处于带外标记，即下一个被读取到的数据是否是带外数据。<br />
+    如果是，sockatmark返回1，此时我们就可以利用带MSG_OOB标志的recv调用来接收带外数据。<br />
+    如果不是，则sockatmark返回0。</p>
+<h3 id="地址信息函数">地址信息函数<a class="headerlink" href="#地址信息函数" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+int getsockname(int sockfd,struct sockaddr*address,socklen_t*address_len);
+
+int getpeername(int sockfd,struct sockaddr*address,socklen_t*address_len);
+</code></pre></div>
+<p>getsockname获取sockfd对应的本端socket地址，并将其存储于address参数指定的内存中，该socket地址的长度则存储于address_len参数指向的变量中。如果实际socket地址的长度大于address所指内存区的大小，那么该socket地址将被截断。getsockname成功时返回0，失败返回-1并设置errno。</p>
+<p>getpeername获取sockfd对应的远端socket地址，其参数及返回值的含义与getsockname的参数及返回值相同。</p>
+<h3 id="socket选项">socket选项<a class="headerlink" href="#socket选项" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+int getsockopt(int sockfd,int level,int
+option_name,void*option_value,socklen_t*restrict option_len);
+
+int setsockopt(int sockfd,int level,int option_name,const void*option_value,socklen_t option_len);
+</code></pre></div>
+<p>sockfd参数指定被操作的目标socket。level参数指定要操作哪个协议的选项（即属性），比如IPv4、IPv6、TCP等。option_name参数则指定选项的名字。</p>
+<p><img alt="Pasted image 20240623200046.png" src="../../image/Pasted%20image%2020240623200046.png" /></p>
+<ul>
+<li>设置socket选项SO_REUSEADDR来强制使用被处于TIME_WAIT状态的连接占用的socket地址。<br />
+<code>setsockopt(sock,SOL_SOCKET,SO_REUSEADDR,＆reuse,sizeof(reuse));</code></li>
+<li>SO_RCVBUF和SO_SNDBUF选项分别表示TCP接收缓冲区和发送缓冲区的大小。<ul>
+<li>TCP接收缓冲区的最小值是256字节，而发送缓冲区的最小值是2048字节</li>
+<li>/proc/sys/net/ipv4/tcp_rmem和/proc/sys/net/ipv4/tcp_wmem来强制TCP接收缓冲区和发送缓冲区的大小没有最小值限制。</li>
+<li><code>setsockopt(sock,SOL_SOCKET,SO_SNDBUF,＆sendbuf,sizeof(sendbuf));</code></li>
+<li><code>setsockopt(sock,SOL_SOCKET,SO_RCVBUF,＆recvbuf,sizeof(recvbuf));</code></li>
+<li><code>getsockopt(sock,SOL_SOCKET,SO_RCVBUF,＆recvbuf,(socklen_t*)＆len);</code></li>
+</ul>
+</li>
+<li>SO_LINGER选项用于控制close系统调用在关闭TCP连接时的行为。<ul>
+<li>linger类型的结构体</li>
+<li>l_onoff等于0。此时SO_LINGER选项不起作用，close用默认行为来关闭socket。</li>
+<li>l_onoff不为0，l_linger等于0。此时close系统调用立即返回，TCP模块将丢弃被关闭的socket对应的TCP发送缓冲区中残留的数据，同时给对方发送一个复位报文段</li>
+<li>l_onoff不为0，l_linger大于0。此时close的行为取决于两个条件：一是被关闭的socket对应的TCP发送缓冲区中是否还有残留的数据；二是该socket是阻塞的，还是非阻塞的。对于阻塞的socket，close将等待一段长为l_linger的时间，直到TCP模块发送完所有残留数据并得到对方的确认。如果这段时间内TCP模块没有发送完残留数据并得到对方的确认，那么close系统调用将返回-1并设置errno为EWOULDBLOCK。如果socket是非阻塞的，close将立即返回，此时我们需要根据其返回值和errno来判断残留数据是否已经发送完毕。<br />
+<div class="highlight"><pre><span></span><code>#include＜sys/socket.h＞
+
+struct linger
+{
+int l_onoff;/*开启（非0）还是关闭（0）该选项*/
+int l_linger;/*滞留时间*/
+};
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="网络信息api">网络信息API<a class="headerlink" href="#网络信息api" title="Permanent link">#</a></h3>
+<h4 id="getservbyname和getservbyport">getservbyname和getservbyport<a class="headerlink" href="#getservbyname和getservbyport" title="Permanent link">#</a></h4>
+<p>getservbyname函数根据名称获取某个服务的完整信息，<br />
+getservbyport函数根据端口号获取某个服务的完整信息。</p>
+<div class="highlight"><pre><span></span><code>#include＜netdb.h＞
+
+struct servent* getservbyname(const char*name,const char*proto);
+
+struct servent* getservbyport(int port,const char*proto);
+
+
+struct servent
+{
+char*s_name;/*服务名称*/
+char**s_aliases;/*服务的别名列表，可能有多个*/
+int s_port;/*端口号*/
+char*s_proto;/*服务类型,通常是tcp或者udp*/
+};
+</code></pre></div>
+<ul>
+<li>name参数指定目标服务的名字，</li>
+<li>port参数指定目标服务对应的端口号。</li>
+<li>proto参数指定服务类型，给它传递“tcp”表示获取流服务，给它传递“udp”表示获取数据报服务，给它传递NULL则表示获取所有类型的服务。</li>
+</ul>
+<h4 id="getaddrinfo">getaddrinfo<a class="headerlink" href="#getaddrinfo" title="Permanent link">#</a></h4>
+<p>getaddrinfo函数既能通过主机名获得IP地址（内部使用的是gethostbyname函数），也能通过服务名获得端口号（内部使用的是getservbyname函数）。</p>
+<div class="highlight"><pre><span></span><code>#include＜netdb.h＞
+
+int getaddrinfo(const char*hostname,const char*service,const struct addrinfo*hints,struct addrinfo**result);
+
+void freeaddrinfo(struct addrinfo*res);
+
+struct addrinfo
+{
+int ai_flags;/*具体的网络协议*/
+int ai_family;/*地址族*/
+int ai_socktype;/*服务类型，SOCK_STREAM或SOCK_DGRAM*/
+int ai_protocol;/*见后文*/
+socklen_t ai_addrlen;/*socket地址ai_addr的长度*/
+char*ai_canonname;/*主机的别名*/
+struct sockaddr*ai_addr;/*指向socket地址*/
+struct addrinfo*ai_next;/*指向下一个sockinfo结构的对象*/
+};
+</code></pre></div>
+<ul>
+<li>hostname参数可以接收主机名，也可以接收字符串表示的IP地址</li>
+<li>service参数可以接收服务名，也可以接收字符串表示的十进制端口号。</li>
+<li>hints参数是应用程序给getaddrinfo的一个提示，以对getaddrinfo的输出进行更精确的控制。hints参数可以被设置为NULL，表示允许getaddrinfo反馈任何可用的结果。</li>
+<li>result参数指向一个链表，该链表用于存储getaddrinfo反馈的结果。</li>
+<li>getaddrinfo反馈的每一条结果都是addrinfo结构体类型的对象</li>
+<li>ai_flags成员可以取表5-6中的标志的按位或<br />
+<img alt="Pasted image 20240623202233.png" src="../../image/Pasted%20image%2020240623202233.png" /></li>
+</ul>
+<h4 id="getnameinfo">getnameinfo<a class="headerlink" href="#getnameinfo" title="Permanent link">#</a></h4>
+<p>getnameinfo函数能通过socket地址同时获得以字符串表示的主机名（内部使用的是gethostbyaddr函数）和服务名（内部使用的是getservbyport函数）。</p>
+<div class="highlight"><pre><span></span><code>#include＜netdb.h＞
+
+int getnameinfo(const struct sockaddr*sockaddr,socklen_t addrlen,char*host,socklen_t hostlen,char*serv,socklen_t servlen,int flags);
+</code></pre></div>
+<p>主机名存储在host参数指向的缓存中，将服务名存储在serv参数指向的缓存中，hostlen和servlen参数分别指定这两块缓存的长度。</p>
+<p>flags参数控制getnameinfo的行为<br />
+<img alt="Pasted image 20240623202452.png" src="../../image/Pasted%20image%2020240623202452.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../serial_console/" title="Serial console" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Serial console
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../ssh/" title="Ssh" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Ssh
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["navigation.expand", "tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
